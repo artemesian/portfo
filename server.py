@@ -1,3 +1,7 @@
+import os
+email_os = os.getenv("email")
+hash_os = os.getenv("hash")
+
 from flask import Flask,render_template,send_file,request
 from email.message import EmailMessage
 from string import Template
@@ -16,7 +20,7 @@ def html_page(page):
 		return render_template(f'{page}.html')
 	except:
 		return render_template('404.html')
-		
+
 
 @app.route('/submit',methods=["POST","GET"])
 def submit_form():
@@ -25,15 +29,15 @@ def submit_form():
 			data = request.form.to_dict()
 			email = EmailMessage()
 			email["from"] = data["email"]
-			email["to"] = "devwithangelo@gmail.com"
+			email["to"] = email_os
 			email['subject'] = "Message from My Portfolio"
 
 			email.set_content(f'Hello it\'s <b>{data["name"]}</b> <br/><u>{data["email"]}</u> <hr/><br/><br/> {data["message"]}',"html")
-				
+
 			with smtplib.SMTP(host="smtp.gmail.com",port=587) as smtp:
 				smtp.ehlo()
 				smtp.starttls()
-				smtp.login('devwithangelo@gmail.com','devwith@ngelo19')
+				smtp.login(email_os,hash_os)
 				smtp.send_message(email)
 				print("Message Sent Successfully")
 				write_to_csv(data)
