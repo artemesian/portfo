@@ -14,7 +14,19 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
   <link href="./static/assets/favicon.ico" rel="icon">
   <style>
+    .spinner-container{
+      display: flex;
+      position: absolute;
+      width:100vw;
+      height:100vh;
+      top: 0;
+      left: 0;
+      z-index: 10000000;
+      justify-content: center;
+      align-items: center;
+    }
     .spinner {
+    z-index: 10000000000;
    position: absolute;
    left: 50%;
    top: 50%;
@@ -101,7 +113,9 @@
 </header>
 
 <div class="section-container">
-  <span class="spinner-off"></span>
+  <span class="spinner-off-container">
+     <span class="spinner-off"></span>
+  </span>
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -191,6 +205,7 @@
   });
   const showSpinner = () =>{
     document.querySelector('.spinner-off').classList.add('spinner')
+    document.querySelector('.spinner-off-container').classList.add('spinner-container')
   }
 </script>
 <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
