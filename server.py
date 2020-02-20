@@ -52,7 +52,7 @@ def get_resume():
 	return send_file('static/assets/NOUBISSIE DIEPE ANGE ODILON CV.pdf')
 
 def write_to_csv(data):
-  with open('database.csv', newline='', mode='a') as database2:
+  with open('./database.csv', newline='', mode='a') as database2:
     email = data["email"]
     name = data["name"]
     message = data["message"]
