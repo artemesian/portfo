@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Angelo's Personnal Portfolio" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Angelo Diepe" name="author">
+
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+  <style>
+    .resume{
+      align-self: center;
+      background-color: white;
+      color: black;
+      font-weight: 500;
+      font-size: 14px;
+      height: 100%;
+      width: 100%;
+      padding: 7.5px;
+    }
+    .resume:hover{
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <title>Home|Angelo</title>
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index" title="">01 : Home</a></li>
+          <li><a href="./works" title="">02 : Works</a></li>
+          <li><a href="./about" title="">03 : About me</a></li>
+          <li><a href="./contact" title="">04 : Contact</a></li>
+          <li><a href="./blog" title="">05 : Blog</a></li>
+          <span><a href="./resume" title="" class="resume">Get Resume</a></span>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/space.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Hello,<br>
+                    <span href="" class="typewrite" data-period="2000"
+                      data-type='[ "I am Angelo Diepe", "I am a Python & FullStack JavaScript Dev", "I Love using Code to Solve Daily Tasks"]'>
+                      <span class="wrap"></span>
+                    </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName('typewrite');
+
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        toRotate = JSON.parse(toRotate)
+        toRotate[0] = "I'm Angelo Diepe"
+        new TxtType(elements[i], toRotate, period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
+
+</script>
+<script type="text/javascript" src="./static/main.70a66962.js" async></script>
+
+<script async>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+  <style>
+   @keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+    .resume{
+      align-self: center;
+      background-color: black;
+      color: white;
+      font-weight: 500;
+      font-size: 14px; 
+      height: 100%;
+      width: 100%;
+      padding: 7.5px;
+    }
+    .resume:hover{
+      background-color: white;
+      color: black;
+    }
+
+  </style>
+  <title>Contact | Angelo</title>  
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index" title="">01 : Home</a></li>
+          <li><a href="./works" title="">02 : Works</a></li>
+          <li><a href="./about" title="">03 : About me</a></li>
+          <li><a href="./contact" title="">04 : Contact</a></li>
+          <li><a href="./blog" title="">05 : Blog</a></li>
+           <span><a href="./resume" title="" class="resume">Get Resume</a></span>
+        </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <span class="spinner-off"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">04 : Contact me</h1>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+               <form action="/submit"  onsubmit="showSpinner()" method="POST" class="reveal-content">
+                  <div class="row">
+                    <div class="col-md-7">
+                        <div class="alert alert-success animated fadeInDown delay-1s" role="alert">Your message was successfully sent</div>
+                    </div>
+                    <div class="col-md-5 address-container">
+                      <ul class="list-unstyled">
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </span>
+                          + 237 6 95 15 11 14
+                        </li>
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa-at" aria-hidden="true"></i>
+                          </span>
+                          angelodiepe10@yahoo.com
+                        </li>
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa fa-map-marker" aria-hidden="true"></i>
+                          </span>
+                         KM Bonamoussadi Douala Cameroon
+                        </li>
+                      </ul>
+                      <h3>Follow me on</h3>
+                      <a href="https://twitter.com/AngeloDiepe" title="" class="fa-icon">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/diepe-angelo-1737ba17a/" title="" class="fa-icon">
+                        <i class="fa fa-linkedin"></i>
+                      </a>
+                     <!--  <a href="http://www.facebook.com" title="" class="fa-icon">
+                        <i class="fa fa-instagram"></i> -->
+                      </a> <a href="https://github.com/angeloDiepe" title="" class="fa-icon">
+                        <i class="fa fa-github"></i>
+                      </a>
+
+                    </div>
+                  </div>
+                </form>
+            </div>
+
+          </div>
+         
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Angelo | 2021</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+  const showSpinner = () =>{
+    document.querySelector('.spinner-off').classList.add('spinner')
+  }
+</script>
+<script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+
+</html>
