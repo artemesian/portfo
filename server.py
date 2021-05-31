@@ -49,7 +49,7 @@ def submit_form():
 
 @app.route('/resume')
 def get_resume():
-	return send_file('static/assets/NOUBISSIE DIEPE ANGE ODILON CV.pdf')
+	return send_file('static/assets/NOUBISSIE DIEPE ANGE ODILON CV v2.pdf')
 
 def write_to_csv(data):
   with open('./database.csv', newline='', mode='a') as database2:
