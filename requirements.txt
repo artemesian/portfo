@@ -86,7 +86,7 @@ nbformat==5.1.2
 nest-asyncio==1.5.1
 netifaces==0.10.4
 nftables==0.1
-notebook==6.2.0
+notebook==6.4.1
 oauthlib==3.1.0
 odoo==14.0.post20210309
 ofxparse==0.19
