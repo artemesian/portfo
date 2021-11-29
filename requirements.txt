@@ -132,7 +132,7 @@ python-apt==2.0.0+ubuntu0.20.4.4
 python-dateutil==2.7.3
 python-debian===0.1.36ubuntu1
 python-dotenv==0.15.0
-python-ldap==3.2.0
+python-ldap==3.4.0
 python-stdnum==1.13
 pythondialog==3.5.1
 pytz==2019.3
