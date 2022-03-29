@@ -93,7 +93,7 @@ ofxparse==0.19
 olefile==0.46
 packaging==20.9
 pandocfilters==1.4.3
-paramiko==2.6.0
+paramiko==2.10.1
 parso==0.8.1
 passlib==1.7.2
 pbr==5.4.5
