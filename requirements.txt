@@ -81,7 +81,7 @@ mock==3.0.5
 monotonic==1.5
 multidict==4.7.3
 nbclient==0.5.2
-nbconvert==6.0.7
+nbconvert==6.3.0
 nbformat==5.1.2
 nest-asyncio==1.5.1
 netifaces==0.10.4
